@@ -1,4 +1,4 @@
-<div class="sm-main-container">
+<div class="sv-main">
 Nem dobott errort?
     <div class="conveyor">
 

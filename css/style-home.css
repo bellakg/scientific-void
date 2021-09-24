@@ -1,0 +1,13 @@
+html,
+body {
+    background: rgba(211, 211, 208, 0.377);
+    padding: 0;
+    margin: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.sv-wrapper{
+    display: grid;
+    background: rgb(255, 255, 255);
+}

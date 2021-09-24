@@ -12,9 +12,9 @@
  */
  get_header();?>
 
-<?php if ( is_home() && ! is_front_page() ) : ?>
+<?php /*if ( is_home() && ! is_front_page() ) : ?>
 	
-<?php endif; ?>
+<?php endif; */?>
 
 <div class="main">
 <div class="content"><?php get_template_part('content');?></div>
