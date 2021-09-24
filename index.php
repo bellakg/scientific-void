@@ -17,6 +17,6 @@
 <?php endif; ?>
 
 <div class="main">
-<div class="content"><?php get_content();?></div>
+<div class="content"><?php get_template_part('content');?></div>
 </div>
 <?php get_footer();?>
