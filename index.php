@@ -19,4 +19,4 @@
 <div class="main">
 <div class="content"><?php get_content();?></div>
 </div>
-<?php get_footer();>?
+<?php get_footer();?>
