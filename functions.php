@@ -18,7 +18,7 @@ add_theme_support('menus');
 add_action( 'after_setup_theme', 'register_custom_nav_menus' );
 function register_custom_nav_menus() {
 	register_nav_menus( array(
-		'sm-top-menu' => __('Top Menu', 'scientificmass'),
+		'sv-top-menu' => __('Top Menu', 'scientificmass'),
 	) );
 }
 

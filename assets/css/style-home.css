@@ -16,14 +16,21 @@ body {
     background: rgb(0, 0, 0);
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 2fr 1fr;
     grid-template-areas:
         "sv-title sv-middle-void sv-logo"
         "sv-site-menu sv-site-menu sv-site-menu";
 }
 .sv-title {
     grid-area: sv-title;
-    
+    color: aliceblue;
+    background: rgb(0, 0, 0);
+    font-size: 2rem;
+}
+.sv-title a {
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
 }
 .sv-midle-void {
     grid-area: sv-middle-void;
@@ -32,4 +39,44 @@ body {
 .sv-logo {
     grid-area: sv-logo;
     
+}
+.sv-site-menu {
+    background: rgb(0, 0, 0);
+    grid-area: sv-site-menu;
+}
+
+
+/*Horizontal top menu*/
+
+.sv-top-menu {
+    background-color: #000000;
+    border-top: 1px solid rgb(10, 54, 9);
+}
+
+.topmenu-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    font-size: 0.9em;
+}
+
+.topmenu-nav>li {
+    float: left;
+    width: 80px;
+}
+
+.topmenu-nav>li a {
+    display: block;
+    width: 4rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* Change the link color to #111 (black) on hover */
+.topmenu-nav>li a:hover {
+    background-color: rgb(9, 13, 37);
 }
