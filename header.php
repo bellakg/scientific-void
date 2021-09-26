@@ -12,8 +12,9 @@
         <div class="sv-header">
 <!--Site title-->
                 <div class="sv-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo get_bloginfo('name'); ?></a></div>
+                <div class="sv-middle-void"></div>
 <!--Site logo-->
-                <div class="sv-logo"><img  id="svlogo" src="<?php echo get_template_directory_uri(); ?>/img/logo.webp" alt="Logo" width="60" height="" /></div>
+                <div class="sv-logo"><img  id="svlogo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.webp" alt="Logo" width="60" height="" /></div>
 <!--Site menu-->
                 <div class="sv-site-menu"> <div class="sv-top-menu">
     <?php if (has_nav_menu('sv-top-menu')) {
