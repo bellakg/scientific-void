@@ -1,5 +1,4 @@
-<div class="sv-main">
-Nem dobott errort?
+<div class="content">
     <div class="conveyor">
 
         <?php query_posts('post_type=post&post_status=publish&posts_per_page=10&paged='. get_query_var('paged')); ?>
@@ -19,17 +18,13 @@ Nem dobott errort?
         <div class="tile">
             <?php if(has_post_thumbnail()):?>
                         <div class="card-thumbnail"><a href="<?php the_permalink();?>"><img
-                                    src="<?php the_post_thumbnail_url('thumb_image');?>" class="img-fluid mb-2"
+                                    src="<?php the_post_thumbnail_url('thumb_image');?>" class="post-thumbnail"
                                     alt="<?php the_title();?>"></a></div>
                         <?php endif;?> <a class="card-title" href="<?php the_permalink();?>">
-                                <h6><?php the_title();?></h6>
+                                <h5><?php the_title();?></h5>
                             </a>
-
-                            <p class="card-excerpt"> <?php echo wp_trim_words( get_the_excerpt(), 10, '...' ); ?> </p></div>
-
-        <?php $i++; ?>
-
-       
+                            <p class="card-excerpt"> <?php echo wp_trim_words( get_the_excerpt(), 15, '...' ); ?> </p></div>
+        <?php $i++; ?>  
         <?php endwhile; ?>
         </div>
        

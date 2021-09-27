@@ -1,3 +1,10 @@
+/*CSS Variables*/
+:root {
+    --primary:#ddd;
+    --dark:#333;
+    --light:#fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
 html,
 body {
     background: rgba(211, 211, 208, 0.377);
@@ -11,26 +18,51 @@ body {
     margin: 0;
     min-height: 100vh;
     max-width: 100vw;
+    display: grid;
+    grid-template-rows: 120px auto 60px;
+    grid-template-areas:
+        "sv-header"
+        "sv-main"
+        "sv-footer";
 }
 .sv-header {
     background: rgb(0, 0, 0);
     display: grid;
+    height: 120px;
+    grid-area: sv-header;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
     grid-template-areas:
         "sv-title sv-middle-void sv-logo"
         "sv-site-menu sv-site-menu sv-site-menu";
 }
+.sv-main {
+    grid-area: sv-main;
+    display: grid;
+    background: var(--primary);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.sv-footer {
+    grid-area: sv-footer;
+    display: grid;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 .sv-title {
     grid-area: sv-title;
+    text-transform: uppercase;
     color: aliceblue;
     background: rgb(0, 0, 0);
     font-size: 2rem;
+    justify-self: center;
+    align-self: center;
+    font-family: 'Lato', sans-serif;
 }
 .sv-title a {
     color: aliceblue;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 400;
 }
 .sv-midle-void {
     grid-area: sv-middle-void;
@@ -38,10 +70,13 @@ body {
 }
 .sv-logo {
     grid-area: sv-logo;
+    justify-self: end;
+    padding-right: 20px;
+    align-self: center;
     
 }
 .sv-site-menu {
-    background: rgb(0, 0, 0);
+    background: var(--dark);
     grid-area: sv-site-menu;
 }
 
@@ -49,34 +84,52 @@ body {
 /*Horizontal top menu*/
 
 .sv-top-menu {
-    background-color: #000000;
-    border-top: 1px solid rgb(10, 54, 9);
+    background: var(--dark);
 }
-
 .topmenu-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 100%;
-    font-size: 0.9em;
+    list-style: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    
 }
-
-.topmenu-nav>li {
-    float: left;
-    width: 80px;
+.topmenu-nav li {
+    display: inline-block;
+    padding: 0px 20px;
+    
 }
-
-.topmenu-nav>li a {
-    display: block;
-    width: 4rem;
+.topmenu-nav li a {
+    text-decoration: none;
     color: rgb(255, 255, 255);
     text-align: center;
-    padding: 10px 12px;
-    text-decoration: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }
-/* Change the link color to #111 (black) on hover */
-.topmenu-nav>li a:hover {
-    background-color: rgb(9, 13, 37);
+.topmenu-nav li a:hover {
+    color: rgb(209, 206, 20);
+}
+.content .conveyor {
+    padding: 20px;
+}
+.conveyor{
+    padding: 1rem;
+    grid-area: conveyor;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    grid-template-rows: repeat(4, 1fr);
+}
+.tile{
+    padding: 1rem;
+}
+.conveyor .tile:nth-child(1) {
+    grid-column-end: span 2;
+    grid-row-end: span 1;
+}
+.tile:hover{
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.44);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.44);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.44);
+}
+.post-thumbnail {
+    width: 100%;
 }

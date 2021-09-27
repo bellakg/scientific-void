@@ -16,7 +16,7 @@
 	
 <?php endif; */?>
 
-<div class="main">
-<div class="content"><?php get_template_part('content');?></div>
+<div class="sv-main">
+    <?php get_template_part('content');?>
 </div>
 <?php get_footer();?>
