@@ -1,0 +1,65 @@
+/*CSS Variables*/
+:root {
+    --primary:rgb(190, 190, 190);
+    --dark:#333;
+    --light:#fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    --conveyor:rgba(221, 221, 201, 0.533);
+}
+html {
+    min-height: 100%;
+    display: flex;
+}
+body {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+}
+.sv-wrapper {
+    display: grid;
+    background-color: var(--primary);
+    min-height: 100%;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "sv-conveyor sv-conveyor sv-conveyor"
+    "sv-conveyor sv-conveyor sv-conveyor"
+    "sv-conveyor sv-conveyor sv-conveyor";
+}
+.sv-header {
+    background-color: var(--dark);
+    height: 120px;
+    color: var(--light);
+}
+.sv-conveyor {
+    display: grid;
+    padding: 1rem;
+    grid-area: sv-conveyor;
+    margin: 1rem;
+    background-color: var(--light);
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "tile tile tile ."
+    ". . . ."
+    ". . . .";
+}
+.tile {
+    grid-area: tile;
+    display: grid;
+    padding: 10px;
+    gap: 10px;
+    background-color: yellow;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    
+}
+.card {
+    height: 100%;
+    width: 100%;
+    background-image: url(img/bg.jpg);
+    background-color: violet;
+}
+a .card {
+    display: block;
+}

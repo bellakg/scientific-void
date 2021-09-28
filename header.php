@@ -20,11 +20,11 @@
                 <div class="sv-logo"><img  id="svlogo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.webp" alt="Logo" width="60" height="" /></div>
 <!--Site menu-->
                 <div class="sv-site-menu"> <div class="sv-top-menu">
-    <?php if (has_nav_menu('sv-top-menu')) {
+    <?php if (has_nav_menu('sv-header-menu')) {
     // User has assigned menu to this location;
     // output it
     wp_nav_menu(array(
-        'theme_location' => 'sv-top-menu',
+        'theme_location' => 'sv-header-menu',
         'menu_class' => 'topmenu-nav',
         'container' => ''
     ));

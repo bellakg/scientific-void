@@ -15,12 +15,17 @@ add_action('wp_enqueue_scripts', 'load_stylesheets');
 add_theme_support('menus');
 
 
-add_action( 'after_setup_theme', 'register_custom_nav_menus' );
-function register_custom_nav_menus() {
-	register_nav_menus( array(
-		'sv-top-menu' => __('Top Menu', 'scientificmass'),
-	) );
+
+function sv_menus(){
+
+	$locations = array(
+		'sv-header-menu' => "Header Menu",
+        'sv-conside-left-menu' => "Left Sidebar Menu"
+	);
+    register_nav_menus($locations);
 }
+
+add_action( 'init', 'sv_menus' );
 
 /* Add sidebars */
 
