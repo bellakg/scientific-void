@@ -5,7 +5,6 @@ sv-wrapper
     sv-main
     sv-footer
 
-
 sv-main > homepage/front page
     sv-content-conveyor
     sv-feed-sidebar
@@ -26,6 +25,7 @@ sv-content
     artticle-body
 
 sv-footer
+    sv-footer-links
     sv-footer-data
     sv-footer-imp
 
@@ -42,3 +42,8 @@ sv-consides
     article data
     source
     similar content
+
+
+.card-thumbnail
+.post-thumbnail
+img.postthumbnail

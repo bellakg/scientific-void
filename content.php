@@ -25,6 +25,9 @@
                             </a>
                             <p class="card-excerpt"> <?php echo wp_trim_words( get_the_excerpt(), 15, '...' ); ?> </p></div>
         <?php $i++; ?>  
+
+
+       
         <?php endwhile; ?>
         </div>
        
