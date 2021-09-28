@@ -55,13 +55,13 @@ add_action( 'widgets_init', 'sm_register_sidebars' );
 
 
 
-set_post_thumbnail_size( 50, 50, array( 'center', 'center') );
+
 
 /*Theme support for thumbnail sizes*/
-
+add_theme_support( 'post-thumbnails' );
 add_image_size('thumb_image', 380, 214, true);
 add_image_size('thumb_small', 200, 120, true);
-add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 50, 50, array( 'center', 'center') );
 
 /*
 Assume you’re wanting to add this Featured Images for books and all posts except other all custom post types. How to do this. See the code below. It’ll enable the Featured Image for all the posts and custom post type called books only.
