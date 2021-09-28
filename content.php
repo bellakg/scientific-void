@@ -15,9 +15,9 @@
 
         <?php while( have_posts() ): the_post(); ?>
         <?php if ( $i == 0 );?>
-        <div class="tile">
+        <div class="tile" style="background-image: url(<?php the_post_thumbnail_url('thumb_image');?>)">
             <?php if(has_post_thumbnail()):?>
-                        <div class="card-thumbnail"><a href="<?php the_permalink();?>"><img
+                        <div class="card-thumbnail"><img
                                     src="<?php the_post_thumbnail_url('thumb_image');?>" class="post-thumbnail"
                                     alt="<?php the_title();?>"></a></div>
                         <?php endif;?> <a class="card-title" href="<?php the_permalink();?>">
