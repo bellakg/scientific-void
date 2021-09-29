@@ -1,5 +1,6 @@
 # scientific-void
 
+
 sv-wrapper
     sv-header
     sv-main
@@ -43,7 +44,7 @@ sv-consides
     source
     similar content
 
-
-.card-thumbnail
-.post-thumbnail
-img.postthumbnail
+conveyor (wrapper for tiles)
+    tile (a stack of cards or chips > stack of featured or a category of posts)
+        card (thumbnail background; title and excerpt)
+        chip (small title + excerpt box)
