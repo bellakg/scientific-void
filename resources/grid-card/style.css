@@ -49,7 +49,7 @@ body {
     display: grid;
     padding: 10px;
     gap: 10px;
-    background-color: yellow;
+    background-color: var(--primary);
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     
