@@ -17,6 +17,7 @@
 <?php endif; */?>
 
 <div class="sv-main">
-    <?php get_template_part('content');?>
+    <?php get_template_part('template-parts/content/content', 'conveyor');?>
+
 </div>
 <?php get_footer();?>
